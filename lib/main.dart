@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: Container(),
+      home: Container(
+        child:Center(
+          child:Text('hello')
+        )
+      ),
     );
   }
 }
