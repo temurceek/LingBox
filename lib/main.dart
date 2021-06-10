@@ -9,14 +9,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: Container(
-        child:Center(
-          child:Text('hello')
-        )
-      ),
+      home: Scaffold(
+        body: Container(
+            child:Center(
+                child:Text('hello')
+            )
+        ),
+      )
     );
   }
 }
