@@ -13,11 +13,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       routes: {
         SplashPage.id:(context)=>SplashPage.screen(),
         IntroMainPage.id:(context)=>IntroMainPage.screen(),
       },
-      home: IntroMainPage.screen(),
+      home: SplashPage.screen(),
     );
   }
 }
