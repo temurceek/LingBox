@@ -93,16 +93,23 @@ class _IntroMainPageState extends State<IntroMainPage> {
                child: Container(
                  padding: EdgeInsets.symmetric(horizontal: 15),
                  child: Center(
-                   child:Container(
-                     width: size.width,
-                     height: size.width*0.15,
-                     decoration: BoxDecoration(
-                       color: Colors.blue,
-                       borderRadius: BorderRadius.circular(size.width*0.15/2)
+                   child:InkWell(
+                     child:Container(
+                         width: size.width,
+                         height: size.width*0.15,
+                         decoration: BoxDecoration(
+                             color: Colors.blue,
+                             borderRadius: BorderRadius.circular(size.width*0.15/2)
+                         ),
+                         child: Center(
+                           child: Text("start",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                         )
                      ),
-                     child: Center(
-                       child: Text("start",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
-                     )
+                     splashColor: Colors.grey,
+                     borderRadius: BorderRadius.circular(size.width*0.15/2),
+                     onTap:(){
+                      print("hello world");
+                     },
                    )
                  ),
                ),
