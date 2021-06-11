@@ -101,7 +101,26 @@ class _IntroMainPageState extends State<IntroMainPage> {
                                width: size.width,
                                height: size.width*0.15,
                                decoration: BoxDecoration(
+                                 boxShadow: [
+                                   BoxShadow(
+                                     color: Colors.grey[500]!,
+                                     spreadRadius: 2,
+                                     blurRadius: 2,
+                                     offset: Offset(0,2),
+                                   ),
+                                 ],
                                    color: Colors.blue,
+                                   gradient: LinearGradient(
+                                     begin: Alignment.centerLeft,
+                                     end:Alignment.centerRight,
+                                     colors: [
+                                       Colors.blue,
+                                       Colors.blue[600]!,
+                                       Colors.blue[700]!,
+                                       Colors.blue[800]!,
+                                       Colors.blue[900]!,
+                                     ]
+                                   ),
                                    borderRadius: BorderRadius.circular(size.width*0.15/2)
                                ),
                                child: Center(
