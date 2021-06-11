@@ -134,7 +134,6 @@ class _IntroMainPageState extends State<IntroMainPage> {
                ),
                ),
            ),
-
            Positioned(
              right: 0,
              bottom: size.width*0.4,
