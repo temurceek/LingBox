@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
              crossAxisAlignment: CrossAxisAlignment.center,
              children: <Widget>[
             Column(
-               children: [
+               children: <Widget>[
                  Image.network("https://play-lh.googleusercontent.com/qIIRp1gUYNMa183JscuBT_Ao63jn1n2Nfxbh5fKaD3MYW1EQyJUv33JDJLyH7JggLqak=rw",height: size.width*0.7,width:size.width*0.7,),
                  Transform.translate(
                    offset:Offset(0,-size.width*0.1),
