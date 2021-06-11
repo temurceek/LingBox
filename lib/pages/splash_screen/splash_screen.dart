@@ -25,16 +25,8 @@ class _SplashPageState extends State<SplashPage> {
                  Image.network("https://play-lh.googleusercontent.com/qIIRp1gUYNMa183JscuBT_Ao63jn1n2Nfxbh5fKaD3MYW1EQyJUv33JDJLyH7JggLqak=rw",height: size.width*0.7,width:size.width*0.7,),
                  Transform.translate(
                    offset:Offset(0,-size.width*0.1),
-                   child: ShaderMask(
-                   blendMode: BlendMode.srcATop,
-                   shaderCallback:(rect){
-                     return LinearGradient(
-                         colors: [Colors.blue,Colors.red],
-                         begin: Alignment.bottomLeft
-                     ).createShader(rect);
-                   },
-                   child: Text("LingBox",style:  TextStyle(fontSize: 40,fontWeight:   FontWeight.bold),),
-                 ),)
+                   child: Text("LingBox",style: GoogleFonts.poppins(fontSize: 40, color: Colors.black, fontWeight: FontWeight.bold)),
+                 ),
                ],
              ),
                Text("POSPERO",style:GoogleFonts.josefinSans(color: Colors.blueGrey, fontWeight: FontWeight.w600,fontSize: 18,),),
