@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         SplashPage.id:(context)=>SplashPage.screen(),
         IntroMainPage.id:(context)=>IntroMainPage.screen(),
       },
-      home: SplashPage.screen(),
+      home: IntroMainPage.screen(),
     );
   }
 }

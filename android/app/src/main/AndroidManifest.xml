@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nmex.ling">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="ling"
         android:icon="@mipmap/ic_launcher">

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as Math;
@@ -21,28 +23,88 @@ class _IntroMainPageState extends State<IntroMainPage> {
            crossAxisAlignment: CrossAxisAlignment.center,
            children: [
              Expanded(
-               flex: 3,
+               flex: 4,
                child: ClipPath(
-                 clipper: MyClipper(),
-                 child:Container(
-                   height: size.width,
-                   width: size.width,
-                   decoration: BoxDecoration(
-                     color: Colors.red,
+                   clipper: MyClipper(),
+                   child:Container(
+                       height: size.width,
+                       width: size.width,
+                       decoration: BoxDecoration(
+                         gradient: LinearGradient(
+                             begin: Alignment.bottomLeft,
+                             end: Alignment.topRight,
+                             colors: [
+                               Colors.blue,
+                               Colors.blue[500]!,
+                             ]
+                         ),
+                       ),
+                       child: Center(
+                         child: ClipRect(
+                           child: Container(
+                             height: size.width*0.7,
+                             width: size.width*0.7,
+                             child: Image.asset('assets/images/ic_image.png',fit: BoxFit.contain,),
+                           ),
+                         ),
+                       )
                    ),
                  ),
-               )
              ),
              Expanded(
                flex: 3,
                child: Container(
-                 color: Colors.green,
+                 padding: EdgeInsets.symmetric(vertical: 15),
+                 width: size.width,
+                 color: Colors.transparent,
+                 child:Column(
+                   crossAxisAlignment: CrossAxisAlignment.center,
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                    Flexible(
+                      child: Container(
+                        // decoration:BoxDecoration(
+                        //   borderRadius:BorderRadius.circular(20),
+                        //   border: Border.all(color: Colors.blue,width: 4)
+                        // ),
+                        margin: EdgeInsets.only(left: 10,right: 10),
+                        padding:EdgeInsets.symmetric(horizontal:10,vertical: 15),
+                        child: RichText(
+                          textAlign: TextAlign.center,
+                          text:TextSpan(
+                              text:"LingBox\n",
+                              style: TextStyle(color:Colors.blue,fontSize: 20,fontWeight: FontWeight.w700),
+                              children:[
+                                TextSpan(
+                                    text: 'Muhabbat bu oʻzganing ahvoli haqida xuddi oʻzingniki kabi qaygʻurishingdir. Bir paytlar ukang bilan munosabatlaring juda iliq boʻlgan, endi esa yoʻq. Sen oʻsha damlarni qaytarishni xohlaysan. Munosabatlaring uzilib ketishini istamaysan. Lekin odamzodning qismati shu. Rishtalar  uziladi, tiklanadi, uziladi, tiklanadi.',
+                                    style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.w600)
+                                )
+                              ]
+                          ),
+                        ),
+                      ),
+                    )
+                   ],
+                 )
                ),
              ),
              Expanded(
-               flex: 1,
+               flex: 2,
                child: Container(
-                   color: Colors.blue,
+                 padding: EdgeInsets.symmetric(horizontal: 15),
+                 child: Center(
+                   child:Container(
+                     width: size.width,
+                     height: size.width*0.15,
+                     decoration: BoxDecoration(
+                       color: Colors.blue,
+                       borderRadius: BorderRadius.circular(size.width*0.15/2)
+                     ),
+                     child: Center(
+                       child: Text("start",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                     )
+                   )
+                 ),
                ),
              ),
            ],
