@@ -5,6 +5,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ling/pages/sign_in/sign_up.dart';
 
 
 class SignIn extends StatefulWidget {
@@ -142,7 +143,9 @@ class _SignInState extends State<SignIn> {
                           Text("Don't have an account?"),
                           SizedBox(width: 20,),
                           TextButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.pushNamed(context, SignUp.id);
+                              },
                               child: Text("Sign Up", style: TextStyle(color: Colors.black),
                               )
                           )
