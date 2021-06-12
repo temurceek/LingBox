@@ -35,7 +35,7 @@ class _SignInState extends State<SignIn> {
                      child: Row(
                          children: [
                            SizedBox(width: 55,),
-                           Image.network("https://play-lh.googleusercontent.com/qIIRp1gUYNMa183JscuBT_Ao63jn1n2Nfxbh5fKaD3MYW1EQyJUv33JDJLyH7JggLqak=rw", height: 100, width: 100,),
+                           Image.asset("assets/images/ic_image1.png", height: 100, width: 100,),
                            Text("LingBox", style: GoogleFonts.poppins(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.black))
                          ]
                      )
