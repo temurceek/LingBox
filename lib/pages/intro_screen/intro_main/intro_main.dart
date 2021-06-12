@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as Math;
+
+import 'package:ling/pages/sign_in/sign_in.dart';
 class IntroMainPage extends StatefulWidget {
   static const String id='intro_main_screen';
   const IntroMainPage({Key? key}) : super(key: key);
@@ -130,7 +132,7 @@ class _IntroMainPageState extends State<IntroMainPage> {
                            splashColor: Colors.grey,
                            borderRadius: BorderRadius.circular(size.width*0.15/2),
                            onTap:(){
-                             print("hello world");
+                             Navigator.pushReplacementNamed(context, SignIn.id);
                            },
                          )
                      ),
