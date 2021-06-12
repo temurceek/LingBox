@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ling/pages/intro_screen/intro_main/intro_main.dart';
 import 'package:ling/pages/sign_in/sign_in.dart';
 class SplashPage extends StatefulWidget {
   static const String id="splash_screen";
@@ -13,7 +14,7 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   void timer(){
-    Timer(Duration(seconds: 3),()=>Navigator.pushReplacementNamed(context,SignIn.id));
+    Timer(Duration(seconds: 3),()=>Navigator.pushReplacementNamed(context,IntroMainPage.id));
   }
   @override void initState() {
     timer();
