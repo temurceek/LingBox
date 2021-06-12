@@ -32,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
              children: <Widget>[
             Column(
                children: <Widget>[
-                 Image.asset("assets/images/ic_image1.png",height: size.width*0.7,width:size.width*0.7,),
+                 Image.asset("assets/images/ic_image1.PNG",height: size.width*0.7,width:size.width*0.7,),
                  Transform.translate(
                    offset:Offset(0,-size.width*0.1),
                    child: Text("LingBox",style: GoogleFonts.poppins(fontSize: 40, color: Colors.black, fontWeight: FontWeight.bold)),
