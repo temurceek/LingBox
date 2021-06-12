@@ -5,13 +5,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ling/pages/sign_in/sign_up.dart';
 
 
 class SignIn extends StatefulWidget {
   static final String id = "sing_in";
   const SignIn({Key? key}) : super(key: key);
-
+  static Widget screen()=>SignIn();
   @override
   _SignInState createState() => _SignInState();
 }
@@ -19,10 +18,12 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
+    final Size size=MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
+      backgroundColor: Colors.white,
       body: SafeArea(
-        child: SingleChildScrollView( child:Container(
-          padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+       child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -135,22 +136,6 @@ class _SignInState extends State<SignIn> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 10,),
-                      //Sign Up link
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Don't have an account?"),
-                          SizedBox(width: 20,),
-                          TextButton(
-                              onPressed: (){
-                                Navigator.pushNamed(context, SignUp.id);
-                              },
-                              child: Text("Sign Up", style: TextStyle(color: Colors.black),
-                              )
-                          )
-                        ],
-                      )
                     ],
                   ),
                 ),
@@ -159,7 +144,6 @@ class _SignInState extends State<SignIn> {
           ),
         )
         )
-      ),
     );
   }
 }

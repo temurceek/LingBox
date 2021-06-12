@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ling/pages/sign_in/sign_in.dart';
 class SplashPage extends StatefulWidget {
   static const String id="splash_screen";
   const SplashPage({Key? key}) : super(key: key);
@@ -9,7 +12,13 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-
+  void timer(){
+    Timer(Duration(seconds: 3),()=>Navigator.pushReplacementNamed(context,SignIn.id));
+  }
+  @override void initState() {
+    timer();
+    super.initState();
+  }
   @override Widget build(BuildContext context) {
     final Size size=MediaQuery.of(context).size;
     return Scaffold(
